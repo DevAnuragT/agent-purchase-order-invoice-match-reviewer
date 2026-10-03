@@ -1,0 +1,29 @@
+{
+  "slug": "purchase-order-invoice-match-reviewer",
+  "title": "Purchase Order Invoice Match Reviewer",
+  "category": "finance",
+  "description": "Compare purchase-order and invoice references with approved variance evidence.",
+  "fields": {
+    "purchase_order_id": {
+      "label": "purchase order id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "invoice_id": {
+      "label": "invoice id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "matched_lines": {
+      "label": "matched lines",
+      "kind": "list",
+      "minimum": 1
+    },
+    "variance_limit": {
+      "label": "variance limit",
+      "kind": "number",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

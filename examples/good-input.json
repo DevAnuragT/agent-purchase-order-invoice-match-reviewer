@@ -1,0 +1,8 @@
+{
+  "purchase_order_id": "evidence-record",
+  "invoice_id": "evidence-record",
+  "matched_lines": [
+    "record-1"
+  ],
+  "variance_limit": 1
+}

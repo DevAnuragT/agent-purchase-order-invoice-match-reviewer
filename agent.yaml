@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: purchase-order-invoice-match-reviewer
+version: 0.1.0
+description: Compare purchase-order and invoice references with approved variance evidence.
+skills:
+  - purchase-order-invoice-match-reviewer-skill
+tools:
+  - review-purchase-order-invoice-match-reviewer
+tags:
+  - finance
+  - evidence-driven

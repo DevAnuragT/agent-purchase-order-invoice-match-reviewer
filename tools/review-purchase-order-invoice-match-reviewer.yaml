@@ -1,0 +1,59 @@
+{
+  "name": "review-purchase-order-invoice-match-reviewer",
+  "description": "Run Purchase Order Invoice Match Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "purchase_order_id": {
+            "type": "string",
+            "description": "purchase order id"
+          },
+          "invoice_id": {
+            "type": "string",
+            "description": "invoice id"
+          },
+          "matched_lines": {
+            "type": "array",
+            "description": "matched lines"
+          },
+          "variance_limit": {
+            "type": "number",
+            "description": "variance limit"
+          }
+        },
+        "required": [
+          "purchase_order_id",
+          "invoice_id",
+          "matched_lines",
+          "variance_limit"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-purchase-order-invoice-match-reviewer.py",
+    "runtime": "python3"
+  }
+}
